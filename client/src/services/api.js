@@ -4,7 +4,7 @@ import axios from 'axios';
 // All requests made with this 'api' instance will automatically go to our
 // backend's public routes.
 const api = axios.create({
- baseURL: 'https://ravi-portfolio-backend.onrender.com/api/public',
+ baseURL: 'https://personal-portfolio-8s2r.onrender.com/api/public',
 });
 
 

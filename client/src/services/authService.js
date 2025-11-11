@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://ravi-portfolio-backend.onrender.com/api/auth';
+const API_URL = 'https://personal-portfolio-8s2r.onrender.com/api/auth';
 /**
  * @description Sends a login request to the backend.
  * @param {Object} userData - Contains username and password.
