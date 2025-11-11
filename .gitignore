@@ -1,26 +1,15 @@
-# =========================================
-# GENERAL
-# =========================================
 
-# Dependency directories
-# These folders are huge and can be recreated by running "npm install"
 /node_modules
 /client/node_modules
 /server/node_modules
 
-# Environment files
-# These files contain secrets and should NEVER be on GitHub
+
 .env
 /client/.env
 /server/.env
 
-# Build output
-# This is the production-ready code created by "npm run build"
-/client/build
 
-# =========================================
-# MISCELLANEOUS
-# =========================================
+/client/build
 
 # Log files
 npm-debug.log*
