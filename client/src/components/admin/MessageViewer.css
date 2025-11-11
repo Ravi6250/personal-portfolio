@@ -1,0 +1,54 @@
+.message-viewer {
+  width: 100%;
+  margin-top: 2rem; /* Add some space above this section */
+  padding-top: 2rem;
+  border-top: 1px solid #444; /* Separator line */
+}
+
+.message-viewer h2 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.message-item {
+  background-color: #3a3a3c;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #555;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #555;
+}
+
+.message-sender {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #e4e4e7;
+}
+
+.message-date {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.message-body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin: 0;
+  white-space: pre-wrap; /* Respects newlines in the message */
+}

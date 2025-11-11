@@ -1,0 +1,56 @@
+.about-page {
+  /* We use the styles from Page.css for the main container and title */
+  width: 100%;
+}
+
+.about-container {
+  max-width: 900px;
+  width: 100%;
+  background: rgba(44, 44, 46, 0.7);
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  text-align: left;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #d1d1d6;
+  margin-bottom: 40px; /* Space between the bio and the skills */
+}
+
+.additional-skills h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  border-bottom: 2px solid #6c63ff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Space between the skill tags */
+}
+
+.skill-tag {
+  background-color: #3a3a3c;
+  color: #e4e4e7;
+  padding: 10px 20px;
+  border-radius: 20px; /* Pill shape */
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid #555;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: #6c63ff;
+  border-color: #6c63ff;
+  color: #fff;
+  transform: translateY(-2px);
+}

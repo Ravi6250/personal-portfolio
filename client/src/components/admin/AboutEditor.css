@@ -1,0 +1,60 @@
+.about-editor {
+  width: 100%;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #444;
+}
+
+.about-editor h2 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.about-textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background-color: #3a3a3c;
+  color: #e4e4e7;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 150px;
+  margin-bottom: 1rem;
+}
+
+.about-editor .save-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #34c759;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.about-editor .save-btn:hover {
+  background-color: #2ca349;
+}
+
+.success-message {
+  color: #34c759;
+  background-color: rgba(52, 199, 89, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.error-message {
+  color: #ff453a;
+  background-color: rgba(255, 69, 58, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 1rem;
+}
