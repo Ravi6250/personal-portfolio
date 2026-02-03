@@ -4,46 +4,44 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 // --- CORRECTED CORS CONFIGURATION ---
-// Whitelist of allowed origins (URLs that can make API requests)
 const whitelist = ['http://localhost:3000', 'https://personal-portfolio-phi-beryl-12.vercel.app'];
-
 const corsOptions = {
   origin: (origin, callback) => {
-    // Check if the incoming origin is in our whitelist
     if (whitelist.indexOf(origin) !== -1 || !origin) {
-      callback(null, true); // Allow the request
+      callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS')); // Block the request
+      callback(new Error('Not allowed by CORS'));
     }
   },
 };
-
-// Use the CORS middleware with our options
 app.use(cors(corsOptions));
 // ------------------------------------
 
-// Middleware to parse incoming JSON bodies
 app.use(express.json());
-
-// Database Connection
-const MONGO_URI = process.env.MONGO_URI;
-mongoose.connect(MONGO_URI)
-  .then(() => {
-    console.log('MongoDB connection established successfully.');
-  })
-  .catch(err => {
-    console.error('Failed to connect to MongoDB:', err);
-  });
 
 // API Route Definitions
 app.use('/api/public', require('./routes/publicRoutes'));
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
 
-// Server Port and Listener
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running and listening on port ${PORT}`);
-});
+// --- NEW ROBUST CONNECTION AND SERVER START ---
+const startServer = async () => {
+  try {
+    // 1. Connect to the database
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log('MongoDB connection established successfully.');
+
+    // 2. Start the Express server ONLY if the database connection is successful
+    app.listen(PORT, () => {
+      console.log(`Server is running and listening on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error('Failed to connect to MongoDB:', error);
+    process.exit(1); // Exit the process with a failure code
+  }
+};
+
+startServer(); // Call the function to start the connection and server
