@@ -11,7 +11,7 @@ const User = require('./models/User');
 // --- DATA TO BE SEEDED ---
 
 const aboutData = {
-  content: "MCA graduate with hands-on experience in building full-stack applications including an LMS platform and a worker job-matching system. Skilled in React.js, Node.js, Express.js, SQL, and MongoDB, with practical knowledge of secure authentication, payment integration, and REST API development. Seeking a Full-Stack/Web Developer role to apply technical expertise in developing scalable, user-focused applications."
+  content: "MCA graduate with hands-on experience in building Full-Stack Applications including an LMS platform and a worker job-matching system. Skilled in React.js, Node.js, Express.js, SQL, and MongoDB, with practical knowledge of secure authentication, payment integration, and REST API development. Seeking a Full-Stack/Web Developer role to apply technical expertise in developing scalable, user-focused applications."
 };
 
 const skillsData = [
