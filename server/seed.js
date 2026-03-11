@@ -43,7 +43,7 @@ const projectsData = [
     title: "Learning Adda - Web Based LMS",
     description: "Built a full-stack learning platform enabling course creation, student enrollment, and progress tracking. Integrated frontend using React.js with backend APIs built in Node.js, and used Clerk for secure authentication.",
     techUsed: ["React.js", "Node.js", "Express.js", "MongoDB", "Clerk", "GitHub"],
-    liveLink: "#", // No live link provided, so using '#'
+    liveLink: "https://learning-adda.vercel.app",
     githubLink: "https://github.com/Ravi6250/Learning-Adda.git"
   },
   {
